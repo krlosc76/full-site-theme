@@ -1,0 +1,83 @@
+/*
+Theme Name: Full site
+Author: Carlos Contreras.
+Description: A short description of the theme.
+Version: 1.0.
+Requires at least: The oldest main WordPress version supported, written in X.X format. 
+Tested up to: The last main WordPress version the theme has been tested up to, i.e. 6.4. Write only the number.
+Requires PHP: The oldest PHP version supported, in X.X format, only the number.
+License: The license of the theme.
+License URI: The URL of the theme license.
+Text Domain: The string used for textdomain for translation. The theme slug.
+*/
+
+
+/* PATTERNS */
+
+
+/* TEMPLATE PARTS */
+.sidebar .wp-block-latest-posts__list li{
+    margin-bottom: 50px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.sidebar .wp-block-categories-list{
+    display: flex !important;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.sidebar .wp-block-categories-list li a{
+    background-color: var(--wp--preset--color--secundario);
+    color: #fff;
+    padding: 5px;
+}
+
+/* HEADER */
+@media (max-width: 781px){
+    .header .wp-block-columns{
+      display: block !important;
+    }
+    .header .wp-block-columns .wp-block-column:nth-child(1){
+        max-width: 20% !important;
+        float: left;
+    }
+    .header .wp-block-columns .wp-block-column:nth-child(2){
+        width: 70% !important;
+        float: right;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+        text-align: end !important;
+    }
+ }
+
+  /* BLOG */
+  .wp-block-post-template li{
+    border: solid 2px #efefef;
+  }
+ .wp-block-column .wp-block-read-more{
+    text-align: right !important;
+  }
+  .wp-block-read-more a :hover{
+    color: var(--wp--preset--color--secundario) !important;
+  }
+  .categorias-single a{
+    border: 1px solid var(--wp--preset--color--secundario) ;
+    padding: 12px 5px !important;
+  }
+.info-autor .wp-block-post-author__name{
+    color: #464646 ;
+    font-size: 20px;
+    font-weight: 600;
+}
+.wp-block-post-author__bio{
+    color: #686868;
+    font-size: 17px;
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .wp-block-post-template{
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+  
+
